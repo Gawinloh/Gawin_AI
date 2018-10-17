@@ -19,6 +19,8 @@ def buttclicked(wiget):
 button.push_handlers(on_click=buttclicked)
 rows.add(button)
 
+label.set_text("Some new text")
+
 pyglet.app.run()
 
 #helloworld
