@@ -1,16 +1,24 @@
-
-
+import pyglet, glooey
 print("")
-print("")
-print("")
-print("Hello World!")
 
-print("Hello World!")
+#this is pat's code:
+mainWindow = pyglet.window.Window()
+mainGui = glooey.Gui(mainWindow)
+rows = glooey.VBox()
+mainGui.add(rows)
 
-print("Hi vsauce, pat here!")
+label = glooey.Label("Hello World")
+rows.add(label)
 
-wakanda = True
-Lol = False
-Gawin = "Fucking thicc"
+form = glooey.Form("Enter password for me to steal: ")
+rows.add(form)
+
+button = glooey.Button("This is a scam!")
+def buttclicked(wiget):
+    print(form.text)
+button.push_handlers(on_click=buttclicked)
+rows.add(button)
+
+pyglet.app.run()
 
 #helloworld
