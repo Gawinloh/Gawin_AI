@@ -19,6 +19,22 @@ def buttclicked(wiget):
 button.push_handlers(on_click=buttclicked)
 rows.add(button)
 
+class PandaButton(glooey.Button):
+    class Label(glooey.Label):
+        custom_padding = 10
+    class Base(glooey.images.background):
+        custom_outline = "00ffff"
+        custom_color = "000000"
+    class Over(glooey.images.Background):
+        custom_outline = "ffffff"
+        custom_color = "666666"
+    class Down(glooey.images.Background):
+        custom_outline = "green"
+        custom_color = "white"
+
+button = PandaButton("Check Password")
+rows.add(button)
+
 pyglet.app.run()
 
 #helloworld
